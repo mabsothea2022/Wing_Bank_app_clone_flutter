@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wink_bank_clone/screen/Page/auth/loging.dart';
+
+import '../../Page/auth/register.dart';
 
 class TopBody extends StatelessWidget {
   @override
@@ -16,6 +19,12 @@ class TopBody extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   print("Check Language.......");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Login(),
+                    ),
+                  );
                 },
                 child: Container(
                   height: 40,
@@ -43,6 +52,12 @@ class TopBody extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   print("Check Language.......");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Register(),
+                    ),
+                  );
                 },
                 child: Container(
                   height: 40,

@@ -63,7 +63,7 @@ class _BodyScreenState extends State<BodyScreen> {
       // height: 2000,
       // width: 500,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20),
         color: const Color.fromARGB(255, 233, 236, 243),
       ),
       child: Padding(

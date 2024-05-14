@@ -13,7 +13,7 @@ AppBar appBarScreen(context) {
             Text(
               "Wing",
               style: TextStyle(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 25,
               ),

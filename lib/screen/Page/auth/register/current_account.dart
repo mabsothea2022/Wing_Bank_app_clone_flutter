@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:wink_bank_clone/theme/colors.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class RegisterCurrentAccount extends StatelessWidget {
+  const RegisterCurrentAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class Login extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Sign in",
+                        "Register Current Account",
                         style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,

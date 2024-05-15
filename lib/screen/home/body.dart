@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:wink_bank_clone/screen/Page/new_account/new_accoount.dart';
+import 'package:wink_bank_clone/screen/Page/top_up/phone_TopUp.dart';
 import 'package:wink_bank_clone/screen/home/body/cartItem.dart';
 import 'package:wink_bank_clone/screen/home/body/contact.dart';
 import '../../theme/colors.dart';
+import '../Page/auth/register.dart';
+import '../Page/cardItem/LocalTransfer.dart';
 import 'body/promotion.dart';
 import 'body/top_body.dart';
 
@@ -71,38 +75,63 @@ class _BodyScreenState extends State<BodyScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CardItem(
                   imageAsset: "assets/icons/local_transfer.png",
                   text: "Local Transfer",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LocalTransfer()),
+                  ),
                 ),
                 CardItem(
                   imageAsset: "assets/icons/new_account.png",
                   text: "New Account",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NewAccount()),
+                  ),
                 ),
                 CardItem(
                   imageAsset: "assets/icons/load.png",
                   text: "Loan",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Register()),
+                  ),
                 ),
               ],
             ),
             const SizedBox(height: 15),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CardItem(
                   imageAsset: "assets/icons/top_up.png",
-                  text: "Local Transfer",
+                  text: "Phone Top Up",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const TopUp()),
+                  ),
                 ),
                 CardItem(
                   imageAsset: "assets/icons/bill_payment.png",
-                  text: "New Account",
+                  text: "Bill Payment",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Register()),
+                  ),
                 ),
                 CardItem(
                   imageAsset: "assets/icons/wing_mall.png",
-                  text: "Loan",
+                  text: "WingMall",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Register()),
+                  ),
                 ),
               ],
             ),

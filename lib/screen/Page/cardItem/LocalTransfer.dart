@@ -31,9 +31,9 @@ class LocalTransfer extends StatelessWidget {
                           Navigator.pop(context);
                         },
                       ),
-                      const SizedBox(width: 40),
+                      const SizedBox(width: 90),
                       const Text(
-                        "Register New Account",
+                        "Local Transfer",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,
@@ -50,7 +50,7 @@ class LocalTransfer extends StatelessWidget {
             flex: 12,
             child: Container(
               width: 500,
-              color: const Color.fromARGB(255, 226, 217, 217).withOpacity(0.55),
+              color: BackgroundColor.colorWhite_2,
               child: Column(
                 children: [
                   Container(

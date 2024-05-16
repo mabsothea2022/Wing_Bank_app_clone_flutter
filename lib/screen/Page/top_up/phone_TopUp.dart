@@ -50,8 +50,7 @@ class TopUp extends StatelessWidget {
               width: 500,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color:
-                    const Color.fromARGB(255, 233, 236, 243).withOpacity(0.85),
+                color: BackgroundColor.colorWhite_2,
               ),
               child: Column(
                 children: [
@@ -62,6 +61,10 @@ class TopUp extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.white,
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.black.withOpacity(0.2),
+                        ),
                       ),
                       child: const Padding(
                         padding: EdgeInsets.all(10.0),

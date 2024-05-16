@@ -21,7 +21,7 @@ class NewAccount extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 30),
                   IconButton(
                     icon: const Icon(
                       Icons.arrow_back,
@@ -57,11 +57,11 @@ class NewAccount extends StatelessWidget {
             flex: 7,
             child: Container(
               width: 500,
-              color: BackgroundColor.colorWhite.withOpacity(0.75),
+              color: BackgroundColor.colorWhite_2,
               child: Container(
                 width: 500,
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
                       const InfoCard(

@@ -1,10 +1,14 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/loan/loan.dart';
 import 'package:wink_bank_clone/screen/Page/new_account/new_accoount.dart';
 import 'package:wink_bank_clone/screen/Page/top_up/phone_TopUp.dart';
 import 'package:wink_bank_clone/screen/home/body/cartItem.dart';
 import 'package:wink_bank_clone/screen/home/body/contact.dart';
 import '../../theme/colors.dart';
-import '../Page/auth/register.dart';
 import '../Page/cardItem/LocalTransfer.dart';
 import 'body/promotion.dart';
 import 'body/top_body.dart';
@@ -16,6 +20,24 @@ class BodyScreen extends StatefulWidget {
 }
 
 class _BodyScreenState extends State<BodyScreen> {
+  Future<void> launchAppStoreOrPlayStore() async {
+    String url;
+    if (Platform.isAndroid) {
+      url =
+          'https://play.google.com/store/apps/details?id=com.winginterlts.wingmall.prod';
+    } else if (Platform.isIOS) {
+      // url = 'https://google.com/';
+      url = "https://apps.apple.com/us/app/wingmall/id1635320449";
+    } else {
+      return;
+    }
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   List<Map<String, String>> promotions = [
     {
       "image": "assets/images/poster-1.png",
@@ -100,7 +122,7 @@ class _BodyScreenState extends State<BodyScreen> {
                   text: "Loan",
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Register()),
+                    MaterialPageRoute(builder: (context) => const Loan()),
                   ),
                 ),
               ],
@@ -122,16 +144,14 @@ class _BodyScreenState extends State<BodyScreen> {
                   text: "Bill Payment",
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Register()),
+                    MaterialPageRoute(
+                        builder: (context) => const BillPayment()),
                   ),
                 ),
                 CardItem(
                   imageAsset: "assets/icons/wing_mall.png",
                   text: "WingMall",
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Register()),
-                  ),
+                  onTap: launchAppStoreOrPlayStore,
                 ),
               ],
             ),

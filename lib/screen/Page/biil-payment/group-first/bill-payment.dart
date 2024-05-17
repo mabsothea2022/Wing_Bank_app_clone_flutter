@@ -1,8 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/item-bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/group-first/item-bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/donation.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/finance.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/insurance.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/internet.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/position.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/school.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/sme-business.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/page/utilities.dart';
+
 import 'package:wink_bank_clone/theme/colors.dart';
 
 class BillPayment extends StatelessWidget {
@@ -131,59 +137,98 @@ class BillPayment extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => const Utilities(),
-                                      ),
-                                    );
-                                  },
-                                  child: const BillItem(
-                                    imagePath:
-                                        "assets/images/bill-payment/utilities.png",
-                                    title: "Utilities",
+                                BillItem(
+                                  imagePath:
+                                      "assets/images/bill-payment/utilities.png",
+                                  title: "Utilities",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Utilities(),
+                                    ),
                                   ),
                                 ),
-                                const BillItem(
+                                BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/insurence.png",
                                   title: "Insurance",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Insurance(),
+                                    ),
+                                  ),
                                 ),
-                                const BillItem(
+                                BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/school.png",
                                   title: "School",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const School(),
+                                    ),
+                                  ),
                                 ),
-                                const BillItem(
+                                BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/donation.png",
                                   title: "Donation & Charity",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Donation(),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
-                            const Column(
+                            Column(
                               children: [
                                 BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/finance.png",
                                   title: "Finance",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Finance(),
+                                    ),
+                                  ),
                                 ),
                                 BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/internet.png",
                                   title: "Internet & TV",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Internet(),
+                                    ),
+                                  ),
                                 ),
                                 BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/SME-business-payment.png",
                                   title: "SME Business Payment",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SMEBussiness(),
+                                    ),
+                                  ),
                                 ),
                                 BillItem(
                                   imagePath:
                                       "assets/images/bill-payment/postpaid.png",
                                   title: "Position",
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Position(),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),

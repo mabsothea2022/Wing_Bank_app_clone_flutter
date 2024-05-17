@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/group-first/bill-payment.dart';
 import 'package:wink_bank_clone/screen/Page/loan/loan.dart';
 import 'package:wink_bank_clone/screen/Page/new_account/new_accoount.dart';
 import 'package:wink_bank_clone/screen/Page/top_up/phone_TopUp.dart';

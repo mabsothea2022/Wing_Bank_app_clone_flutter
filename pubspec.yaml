@@ -54,6 +54,7 @@ flutter:
     - assets/images/loan/
     - assets/images/bill-payment/
     - assets/images/bill-payment/utilities/
+    - assets/images/bill-payment/insurance/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

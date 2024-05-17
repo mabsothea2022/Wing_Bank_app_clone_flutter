@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ItemList extends StatelessWidget {
+class ItemList_Utilities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: Container(
-        height: 735,
+        height: 690,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.9),
           borderRadius: BorderRadius.circular(10),
@@ -119,7 +119,7 @@ class ItemList extends StatelessWidget {
               child: Image.asset(imagePath, height: 40),
             ),
             Container(
-              width: 310,
+              width: 295,
               child: Text(
                 text,
                 style: const TextStyle(

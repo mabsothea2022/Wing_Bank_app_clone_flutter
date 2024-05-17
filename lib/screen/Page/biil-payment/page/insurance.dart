@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/data/container-item.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/widget/container-item.dart';
 import 'package:wink_bank_clone/theme/colors.dart';
 
 class Insurance extends StatelessWidget {
@@ -37,7 +37,7 @@ class Insurance extends StatelessWidget {
                         "Insurance",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
+                          fontSize: 21,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

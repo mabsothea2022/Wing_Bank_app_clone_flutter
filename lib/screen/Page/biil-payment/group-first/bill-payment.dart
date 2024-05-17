@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/group-first/item-bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/bill-payment.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/page/donation.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/page/finance.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/page/insurance.dart';
@@ -93,42 +95,53 @@ class BillPayment extends StatelessWidget {
                         const EdgeInsets.only(top: 10, right: 15, left: 15),
                     child: Column(
                       children: [
-                        Container(
-                          width: 400,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.95),
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.black.withOpacity(0.2),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const BillPaymentPage(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 400,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.95),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black.withOpacity(0.2),
+                              ),
                             ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 5, right: 5),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.search),
-                                    ),
-                                    Container(
-                                      width: 250,
-                                      child: const Text(
-                                        "Search...",
-                                        style: TextStyle(fontSize: 16),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 5, right: 5),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      IconButton(
+                                        onPressed: () {},
+                                        icon: const Icon(Icons.search),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.qr_code),
-                                ),
-                              ],
+                                      Container(
+                                        width: 250,
+                                        child: const Text(
+                                          "Search...",
+                                          style: TextStyle(fontSize: 16),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.qr_code),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

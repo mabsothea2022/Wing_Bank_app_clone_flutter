@@ -10,9 +10,9 @@
   <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/fac74a5b-56f6-4fe6-ba9b-fd6364833bdc" alt="Simulator Screenshot 3" width="30%" />
 </p>
 <p align="center">
-  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/3b9235a1-6248-48dc-ac83-7fb3baf95929" alt="Simulator Screenshot 4" width="30%" />
-  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/c376a12c-5097-4a0c-9aaf-62800c68df37" alt="Simulator Screenshot 5" width="30%" />
-  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/e9532374-1a79-472e-a515-9c70d5546bf4" alt="Simulator Screenshot 6" width="30%" />
+  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/c376a12c-5097-4a0c-9aaf-62800c68df37" alt="Simulator Screenshot 4" width="30%" />
+  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/e9532374-1a79-472e-a515-9c70d5546bf4" alt="Simulator Screenshot 5" width="30%" />
+  <img src="https://github.com/Smey09/Wing_Bank_app_clone_flutter/assets/149933218/3b9235a1-6248-48dc-ac83-7fb3baf95929" alt="Simulator Screenshot 6" width="30%" />
 </p>
 
 

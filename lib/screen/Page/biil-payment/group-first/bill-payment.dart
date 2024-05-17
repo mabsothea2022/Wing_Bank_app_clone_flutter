@@ -1,15 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:wink_bank_clone/screen/Page/biil-payment/group-first/item-bill-payment.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/bill-payment.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/donation.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/finance.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/insurance.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/internet.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/position.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/school.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/sme-business.dart';
-import 'package:wink_bank_clone/screen/Page/biil-payment/page/utilities.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/bill-payment.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/donation.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/finance.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/insurance.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/internet.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/others.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/position.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/school.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/sme-business.dart';
+import 'package:wink_bank_clone/screen/Page/biil-payment/page/views/utilities.dart';
 
 import 'package:wink_bank_clone/theme/colors.dart';
 
@@ -247,36 +249,46 @@ class BillPayment extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Container(
-                            height: 90,
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.9),
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                width: 1,
-                                color: Colors.black.withOpacity(0.1),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Other(),
                               ),
-                            ),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.more_horiz,
-                                  size: 35,
-                                  color: Colors.blue,
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Container(
+                              height: 90,
+                              decoration: BoxDecoration(
+                                color: Colors.white.withOpacity(0.9),
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  width: 1,
+                                  color: Colors.black.withOpacity(0.1),
                                 ),
-                                SizedBox(width: 10),
-                                Text(
-                                  "Others",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
+                              ),
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.more_horiz,
+                                    size: 35,
+                                    color: Colors.blue,
                                   ),
-                                ),
-                              ],
+                                  SizedBox(width: 10),
+                                  Text(
+                                    "Others",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

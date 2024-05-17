@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wink_bank_clone/screen/Page/auth/register.dart';
 
 class ItemList_Utilities extends StatelessWidget {
   @override
@@ -6,7 +7,7 @@ class ItemList_Utilities extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: Container(
-        height: 690,
+        height: MediaQuery.of(context).size.height * 0.8,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.9),
           borderRadius: BorderRadius.circular(10),
@@ -21,85 +22,59 @@ class ItemList_Utilities extends StatelessWidget {
             child: Column(
               children: [
                 buildRow(
-                  "assets/images/bill-payment/utilities/logo-01.png",
-                  "ANGTASOM WATER SUPPLY STATION",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/logo-01.png",
+                    "ANGTASOM WATER SUPPLY STATION"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "BOREY KAMKOR PHALIT NOENG PHKOT PHKONG TEUK SAAT CO., LTD.",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/null-image.png",
+                    "BOREY KAMKOR PHALIT NOENG PHKOT PHKONG TEUK SAAT CO., LTD."),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Cheang Tong Water Supply",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/null-image.png",
+                    "Cheang Tong Water Supply"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/water-chum-kiri.jpg",
-                  "Chumkiri Water Supply",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/water-chum-kiri.jpg",
+                    "Chumkiri Water Supply"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/enterprise.jpg",
-                  "ENTERPRISE FOR MANAGING MUNICIPAL SOLID WASTE IN PHNOM PENH (EWP)",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/enterprise.jpg",
+                    "ENTERPRISE FOR MANAGING MUNICIPAL SOLID WASTE IN PHNOM PENH (EWP)"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/elec-du-cambode.png",
-                  "Electricite Du Cambodge",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/elec-du-cambode.png",
+                    "Electricite Du Cambodge"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Electricity Licensee (E-Power)",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/null-image.png",
+                    "Electricity Licensee (E-Power)"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/kroch-chhmar.png",
-                  "KROCH CHHMAR WATER SUPPLY",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/kroch-chhmar.png",
+                    "KROCH CHHMAR WATER SUPPLY"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Kampingpuoy Water Supply",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/null-image.png",
+                    "Kampingpuoy Water Supply"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/water-kompongchomlong.png",
-                  "Kompong Chomlong Water Supply",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/water-kompongchomlong.png",
+                    "Kompong Chomlong Water Supply"),
                 buildDivider(),
                 buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Kraing Chek Water Supply and Production Station",
-                ),
-                //test
-                buildDivider(),
-                buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Electricity Licensee (E-Power)",
-                ),
-                buildDivider(),
-                buildRow(
-                  "assets/images/bill-payment/utilities/kroch-chhmar.png",
-                  "KROCH CHHMAR WATER SUPPLY",
-                ),
-                buildDivider(),
-                buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Kampingpuoy Water Supply",
-                ),
-                buildDivider(),
-                buildRow(
-                  "assets/images/bill-payment/utilities/water-kompongchomlong.png",
-                  "Kompong Chomlong Water Supply",
-                ),
-                buildDivider(),
-                buildRow(
-                  "assets/images/bill-payment/utilities/null-image.png",
-                  "Kraing Chek Water Supply and Production Station",
-                ),
+                    context,
+                    "assets/images/bill-payment/utilities/null-image.png",
+                    "Kraing Chek Water Supply and Production Station"),
               ],
             ),
           ),
@@ -108,10 +83,18 @@ class ItemList_Utilities extends StatelessWidget {
     );
   }
 
-  Widget buildRow(String imagePath, String text) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 13, bottom: 13),
-      child: Container(
+  Widget buildRow(BuildContext context, String imagePath, String text) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Register(),
+          ),
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(top: 13, bottom: 13),
         child: Row(
           children: [
             Container(

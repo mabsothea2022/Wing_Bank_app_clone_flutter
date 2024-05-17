@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wink_bank_clone/screen/Page/FAQs/FAQs.dart';
+import 'package:wink_bank_clone/screen/Page/about/about.dart';
+import 'package:wink_bank_clone/screen/Page/contact-us/contact-us.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({Key? key}) : super(key: key);
@@ -19,21 +22,39 @@ class ContactCard extends StatelessWidget {
           ),
         ],
       ),
-      child: const Center(
+      child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             InfoItem(
               icon: Icons.question_mark_sharp,
               text: "FAQs",
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FAQs(),
+                ),
+              ),
             ),
             InfoItem(
               icon: Icons.contact_emergency,
               text: "Contact Us",
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ContactUs(),
+                ),
+              ),
             ),
             InfoItem(
               icon: Icons.person,
               text: "About Us",
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const About(),
+                ),
+              ),
             ),
           ],
         ),
@@ -45,28 +66,36 @@ class ContactCard extends StatelessWidget {
 class InfoItem extends StatelessWidget {
   final IconData icon;
   final String text;
+  final Function onTap;
 
-  const InfoItem({required this.icon, required this.text, Key? key})
-      : super(key: key);
+  const InfoItem({
+    required this.icon,
+    required this.text,
+    Key? key,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          icon,
-          color: Colors.black.withOpacity(0.3),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          text,
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 15,
+    return GestureDetector(
+      onTap: () => onTap(),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            icon,
+            color: Colors.black.withOpacity(0.3),
           ),
-        ),
-      ],
+          const SizedBox(height: 5),
+          Text(
+            text,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 15,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

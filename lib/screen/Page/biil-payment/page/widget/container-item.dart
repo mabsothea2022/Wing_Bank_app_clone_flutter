@@ -76,7 +76,7 @@ class ContainerItems extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ItemList_Utilities(), // Assuming ItemList is a separate widget
+                  ItemList_Utilities(),
                 ],
               ),
             ),

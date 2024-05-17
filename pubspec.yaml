@@ -55,6 +55,7 @@ flutter:
     - assets/images/bill-payment/
     - assets/images/bill-payment/utilities/
     - assets/images/bill-payment/insurance/
+    - assets/images/contact/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wink_bank_clone/screen/Page/FAQs/FAQs.dart';
-import 'package:wink_bank_clone/screen/Page/about/about.dart';
-import 'package:wink_bank_clone/screen/Page/contact-us/contact-us.dart';
+import 'package:wink_bank_clone/screen/Page/imformation/FAQs/FAQs.dart';
+import 'package:wink_bank_clone/screen/Page/imformation/about/about.dart';
+import 'package:wink_bank_clone/screen/Page/imformation/contact-us/contact-us.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({Key? key}) : super(key: key);
